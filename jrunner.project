@@ -1,0 +1,10 @@
+{
+    "name": "ramar/lib/net",
+    "dependencies": {
+        "disk": {
+            "ramar/lib/test": "ramar_test.jar",
+            "ramar/lib/iter": "ramar_iter.jar",
+            "ramar/lib/json": "ramar_json.jar"
+        }
+    }
+}
