@@ -11,6 +11,11 @@ public class PaginationState
         this.retryCount = retryCount;
     }
 
+    @Override
+    public String toString()
+    {
+        return this.offset() + ": " + this.retries();
+    }
 
 
     /* Public API

@@ -54,6 +54,7 @@ public class Paginator
     {
         return Paginate(0, page);
     }
+    
     public static <T> List<T> Paginate(Integer startOffset, OffsetItemsPage<T> page) throws Exception
     {
         try
