@@ -22,6 +22,11 @@ public class HttpException extends NetException
         return "";
     }
 
+    private HttpResponse<?> response = null;
+    public HttpResponse<?> response()
+    { return this.response; }
+
+
     public String message()
     {
         return new JObject()
@@ -71,13 +76,18 @@ public class HttpException extends NetException
         this.code = code;
     }
 
-    public HttpException(HttpResponse<String> response)
+    public HttpException(HttpResponse<?> response)
     {
-        super(MessageOf(response), null);
+        super(null);
+        this.response = response;
         this.code = response.statusCode();
     }
 
+
     public final int code;
+    public int code()
+    { return this.code; }
+     
     public int getStatusCode() 
     { return this.code; }
 

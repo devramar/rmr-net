@@ -39,7 +39,7 @@ public class NetUtil
         {
             HttpResponse<T> response = client.send(req, handler);
             if( response.statusCode() != 200 ) 
-                throw new HttpException(response.statusCode());
+                throw new HttpException(response);
 
             return response;
         }
