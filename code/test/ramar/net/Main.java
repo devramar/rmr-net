@@ -1,15 +1,16 @@
-package test.ramar.utils;
+package test.ramar.net;
 
-import dev.ramar.test.Test;
 import dev.ramar.test.TestUtil;
-
-import dev.ramar.test.*;
 
 public class Main
 {
-    public static void main(String... args)
+
+    public static void main(String[] args)
     {
         TestUtil.Test(
+            AddressScopeTests.class,
+            MimeFilesTests.class
         );
     }
+
 }

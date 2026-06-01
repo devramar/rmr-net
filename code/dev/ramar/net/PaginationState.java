@@ -40,7 +40,7 @@ public class PaginationState
         this.nextOffset = nextOffset;
     }
 
-    /// stop early
+    /// stop
     public void stop()
     {
         this.retry = false;

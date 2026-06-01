@@ -4,6 +4,7 @@
         "disk": [
             "ramar/lib/test",
             "ramar/lib/iter",
+            "ramar/lib/utils",
             "ramar/lib/structs",
             "ramar/lib/json"
         ]
