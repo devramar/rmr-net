@@ -1,11 +1,14 @@
 package test.ramar.net;
 
-import dev.ramar.net.AddressScope;
-import dev.ramar.test.TestExecutor;
 import dev.ramar.test.TestUtil;
+import dev.ramar.test.TestExecutor;
+
 
 import java.net.URI;
 import java.net.http.HttpRequest;
+
+
+import dev.ramar.net.AddressScope;
 
 public class AddressScopeTests
 {

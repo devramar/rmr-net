@@ -1,11 +1,11 @@
 package dev.ramar.net;
 
-import dev.ramar.json.JITJObject;
-import dev.ramar.json.JObject;
-
 import java.net.http.HttpResponse;
 
+
 import dev.ramar.json.*;
+import dev.ramar.json.JObject;
+import dev.ramar.json.JITJObject;
 
 public class HttpException extends NetException
 {

@@ -1,16 +1,15 @@
 package dev.ramar.net;
 
 import java.net.URI;
-
-import dev.ramar.json.JITJArray;
-import dev.ramar.json.JITJObject;
-import dev.ramar.json.JToken;
-import dev.ramar.json.JValue;
-
-
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+
+
+import dev.ramar.json.JToken;
+import dev.ramar.json.JValue;
+import dev.ramar.json.JITJArray;
+import dev.ramar.json.JITJObject;
 
 public interface NetQuerier
 {

@@ -1,16 +1,19 @@
 package dev.ramar.net;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 import java.net.URI;
 import java.net.http.HttpRequest;
+
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
+
 import java.nio.file.Path;
+import java.nio.file.Files;
+
 import java.util.*;
+import java.util.List;
+import java.util.UUID;
+import java.util.ArrayList;
 
 /// GPT-MADE
 public class MultipartBuilder

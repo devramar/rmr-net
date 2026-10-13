@@ -1,11 +1,13 @@
 package dev.ramar.net;
 
-import dev.ramar.json.JToken;
-
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpRequest;
+
 import java.nio.charset.StandardCharsets;
+
+
+import dev.ramar.json.JToken;
 
 public class AddressScope
 {

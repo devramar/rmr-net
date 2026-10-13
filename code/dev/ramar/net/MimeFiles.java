@@ -1,7 +1,7 @@
 package dev.ramar.net;
 
-import java.util.Locale;
 import java.util.Map;
+import java.util.Locale;
 
 /// converts MIME strings into file extensions
 public class MimeFiles

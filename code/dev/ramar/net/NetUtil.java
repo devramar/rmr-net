@@ -1,19 +1,19 @@
 package dev.ramar.net;
 
-import dev.ramar.json.JArray;
-import dev.ramar.json.JITJArray;
-import dev.ramar.json.JITJObject;
-import dev.ramar.json.JObject;
-import dev.ramar.json.JToken;
+import java.io.IOException;
+import java.io.UncheckedIOException;
 
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import java.io.IOException;
-import java.io.UncheckedIOException;
 
 import dev.ramar.json.*;
+import dev.ramar.json.JArray;
+import dev.ramar.json.JToken;
+import dev.ramar.json.JObject;
+import dev.ramar.json.JITJArray;
+import dev.ramar.json.JITJObject;
 
 public class NetUtil
 {
@@ -45,10 +45,17 @@ public class NetUtil
         }
         catch(InterruptedException ex)
         {
-            throw new RuntimeException("interrupted: " + ex.getMessage(), ex);
+            throw new RuntimeException("interrupted");
         }
         catch(HttpException ex)
         {
+            if( ex.code == 429 )
+            {
+                var retryAfter = ex.response().headers().firstValue("Retry-After");
+                String retryMsg = retryAfter.orElse("NOT SUPPLIED");
+
+                throw new HttpException("failed to .HandleRequest: 429 Too Many Requests. Retry-After: " + retryMsg, ex);
+            }
             throw new HttpException("failed to .HandleRequest: " + ex.code, ex);
         }
         catch(IOException ex)

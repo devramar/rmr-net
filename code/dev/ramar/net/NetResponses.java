@@ -1,9 +1,9 @@
 package dev.ramar.net;
 
 
-import dev.ramar.json.JObject;
 import dev.ramar.json.JArray;
 import dev.ramar.json.JToken;
+import dev.ramar.json.JObject;
 
 public class NetResponses
 {
