@@ -8,8 +8,10 @@ import java.net.http.HttpResponse;
 
 import dev.ramar.json.JToken;
 import dev.ramar.json.JValue;
-import dev.ramar.json.JITJArray;
-import dev.ramar.json.JITJObject;
+import dev.ramar.json.jit.JITJArray;
+import dev.ramar.json.jit.JITJObject;
+
+
 
 public interface NetQuerier
 {

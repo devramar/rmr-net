@@ -3,9 +3,9 @@ package dev.ramar.net;
 import java.net.http.HttpResponse;
 
 
-import dev.ramar.json.*;
 import dev.ramar.json.JObject;
-import dev.ramar.json.JITJObject;
+import dev.ramar.json.jit.JITJObject;
+
 
 public class HttpException extends NetException
 {
@@ -29,7 +29,7 @@ public class HttpException extends NetException
 
     public String message()
     {
-        return new JObject()
+        return JObject.Create()
             .with("error", this.getMessage())
             .toString()
         ;

@@ -10,7 +10,11 @@ import java.time.Duration;
 import java.util.function.Function;
 
 
-import dev.ramar.json.*;
+import dev.ramar.json.JArray;
+import dev.ramar.json.JToken;
+import dev.ramar.json.JObject;
+import dev.ramar.json.jit.JITJArray;
+import dev.ramar.json.jit.JITJObject;
 
 import dev.ramar.structs.Either;
 

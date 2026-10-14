@@ -11,7 +11,7 @@ public class NetResponses
 
     public static JObject Success(Object result)
     {
-        return new JObject()
+        return JObject.Create()
             .with("result", result)
             .asObject()
         ;
@@ -19,7 +19,7 @@ public class NetResponses
 
     public static JObject Error(String message)
     {
-        return new JObject()
+        return JObject.Create()
             .with("error", message)
             .asObject()
         ;
@@ -28,7 +28,7 @@ public class NetResponses
 
     public static JObject Exception(Exception ex)
     {
-        return new JObject()
+        return JObject.Create()
             .with("error", ex.getMessage())
             .with("trace", JArray.From(ExceptionUtil.TraceLinesAsStream(ex)))
             .asObject()
@@ -39,7 +39,7 @@ public class NetResponses
 
     public static JObject Page(int total, int offset, JArray items)
     {
-        return new JObject()
+        return JObject.Create()
             .with("total", total)
             .with("offset", offset)
             .with("items", items)

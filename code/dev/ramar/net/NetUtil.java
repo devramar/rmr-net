@@ -8,12 +8,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 
-import dev.ramar.json.*;
 import dev.ramar.json.JArray;
 import dev.ramar.json.JToken;
 import dev.ramar.json.JObject;
-import dev.ramar.json.JITJArray;
-import dev.ramar.json.JITJObject;
+import dev.ramar.json.jit.JITJArray;
+import dev.ramar.json.jit.JITJObject;
 
 public class NetUtil
 {
@@ -27,7 +26,7 @@ public class NetUtil
 
     public static JToken ExceptionResponse(Exception ex)
     {
-        return new JObject()
+        return JObject.Create()
             .with("error", ex.getMessage())
             .with("trace", JArray.From(ExceptionUtil.TraceLinesAsStream(ex)))
         ;
